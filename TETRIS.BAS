@@ -182,8 +182,8 @@ LOOP
       LINE (220, 0)-(220, 401), 7
       LINE (220, 401)-(421, 401), 7
       LINE (421, 401)-(421, 0), 7
-    
-      
+
+
 CYCL = 0
 228
 FOR i = 20 TO 1 STEP -1
@@ -225,7 +225,7 @@ NEXT i
   LOCATE 20, 30
   PRINT score
   SLEEP 2
-  OPEN "record.txt" FOR INPUT AS #1
+  OPEN "records.txt" FOR INPUT AS #1
   fl = 0
   DO UNTIL EOF(1)
   fl = fl + 1
@@ -249,7 +249,7 @@ NEXT i
   FOR g = 1 TO fl
     PRINT g, un(g), sc(g)
   NEXT g
-  OPEN "record.txt" FOR OUTPUT AS #2
+  OPEN "records.txt" FOR OUTPUT AS #2
   FOR g = 1 TO fl
     PRINT #2, un(g)
     PRINT #2, sc(g)
@@ -527,7 +527,7 @@ END FUNCTION
 SUB DrawFig (t AS INTEGER, x AS INTEGER, y AS INTEGER, r AS INTEGER)
 SELECT CASE t
 CASE 0
-LINE (221 + (y - 1) * 20, 1 + (x - 1) * 20)-(220 + 40 + (y - 1) * 20, 0 + 40 + (x - 1) * 20), 2, BF' ä¨£ãà  0
+LINE (221 + (y - 1) * 20, 1 + (x - 1) * 20)-(220 + 40 + (y - 1) * 20, 0 + 40 + (x - 1) * 20), 2, BF' ä¨£ï¿½ï¿½ï¿½ 0
 CASE 1
 IF r = 1 OR r = 3 THEN
 LINE (221 - 20 + (y - 1) * 20, 1 + (x - 1) * 20)-(280 + (y - 1) * 20, 0 + (x * 20)), 5, BF
@@ -601,7 +601,7 @@ END SUB
 SUB KillFig (t AS INTEGER, x AS INTEGER, y AS INTEGER, r AS INTEGER)
 SELECT CASE t
 CASE 0
-LINE (221 + (y - 1) * 20, 1 + (x - 1) * 20)-(220 + 40 + (y - 1) * 20, 0 + 40 + (x - 1) * 20), 0, BF' ä¨£ãà  0
+LINE (221 + (y - 1) * 20, 1 + (x - 1) * 20)-(220 + 40 + (y - 1) * 20, 0 + 40 + (x - 1) * 20), 0, BF' ä¨£ï¿½ï¿½ï¿½ 0
 CASE 1
 IF r = 1 OR r = 3 THEN
 LINE (221 - 20 + (y - 1) * 20, 1 + (x - 1) * 20)-(280 + (y - 1) * 20, 0 + (x * 20)), 0, BF
@@ -671,4 +671,3 @@ LINE (241 + (y - 1) * 20, 1 + (x - 1) * 20)-(260 + (y - 1) * 20, 20 + (x - 1) * 
 END SELECT
 END SELECT
 END SUB
-
