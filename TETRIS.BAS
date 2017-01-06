@@ -185,7 +185,7 @@ LOOP
 
 
 CYCL = 0
-228
+1:
 FOR i = 20 TO 1 STEP -1
 als = 0
 FOR j = 1 TO 10
@@ -203,7 +203,7 @@ a(l, j) = a(l - 1, j)
 LINE (221 + (j - 1) * 20, 1 + (l - 1) * 20)-(220 + j * 20, l * 20), a(l, j), BF
 NEXT j
 NEXT l
-GOTO 228
+GOTO 1
 END IF
 NEXT i
       r = FIX(RND * 4) + 1
